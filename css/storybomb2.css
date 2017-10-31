@@ -1,0 +1,627 @@
+    * {
+        box-sizing: border-box;
+    }
+    /*Algemene vormgeving van de DOM*/
+    
+    ul > li {
+        list-style-type: none;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    main {
+        background-color: #F3E5D8;
+    }
+    /*Algemene Lettertypes*/
+    
+    h1 {
+        font-family: "Nexa-Bold";
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    h2 {
+        font-family: "Nexa-Bold";
+        font-size: 1.5em;
+        background-color: white;
+        border-radius: 1.25em;
+        margin-left: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    h3 {
+        font-family: "Nexa-Light";
+        font-size: 1.2em;
+    }
+    
+    p {
+        font-family: "NexaRegular";
+        font-size: 1em;
+    }
+    
+    a {
+        font-family: "NexaRegular";
+        font-size: 1em;
+    }
+    /*Header*/
+    
+    header {
+        background-color: #FBF7F3;
+    }
+    /*logo*/
+    
+    header img {
+        width: 9em;
+        height: 4.5em;
+        position: absolute;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+    }
+    /*Header navigatie*/
+    
+    header ul li:nth-of-type(1) {
+        font: 0/0 a;
+        background: url(../images/search.icon.green.png);
+        background-size: 3rem;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 3rem;
+    }
+    
+    header ul li:nth-of-type(2) {
+        font: 0/0 a;
+        background: url(../images/favorite.nav.def.png);
+        background-size: 3rem;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 3rem;
+    }
+    
+    header ul li:nth-of-type(3) {
+        font: 0/0 a;
+        background: url(../images/account.icon!.png);
+        background-size: 3rem;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 3rem;
+    }
+    
+    header nav {
+        margin: 0.5em;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    header ul {
+        display: flex;
+    }
+    
+    header li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    /*@media screen and (min-width: 1em) {
+        header {
+            background-size: 2rem;
+        }
+    }
+    
+    @media screen and (min-width: 55em) {
+        header {
+            background-size: 3rem;
+        }
+    }*/
+    /*zoekfunctie*/
+    
+    header input {
+        border-radius: 1.25em;
+        height: 3em;
+        font-family: 'NexaRegular';
+        background: url(../images/delete.green.search.png);
+        background-size: 2em;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-position: right;
+    }
+    
+    .search {
+        opacity: 0;
+        width: 5em;
+    }
+    
+    .search.active {
+        margin-left: -60em;
+        margin-top: 8em;
+        opacity: 1;
+        transition: 3s;
+        width: 40em;
+        border-style: none;
+    }
+    /*mediaquery section*/
+    
+    @media screen and (min-width: 1em) {
+        section {
+            background: url(../images/strandfoto2.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 12em;
+            background-position: center;
+        }
+    }
+    
+    @media screen and (min-width: 56em) {
+        section {
+            background: url(../images/strand%20+%20tablet.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 12em;
+            background-position: center;
+        }
+    }
+    /*Filter en sorteerfunctie*/
+    
+    form {
+        background-color: #F3E5D8;
+        height: 5em;
+    }
+    
+    form nav {
+        background: url(../images/new-kleurenpalet.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    #filter_sortby ul {
+        list-style: none;
+        position: relative;
+        margin-top: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #filter_sortby ul a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 1.5em;
+        padding: 0 1em;
+    }
+    
+    #filter_sortby ul li {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #filter_sortby ul li:nth-of-type(1) ul li:hover {
+        background-color: #E83D6A;
+    }
+    
+    #filter_sortby ul li:nth-of-type(2) ul li:hover {
+        background-color: #2A328A;
+    }
+    
+    #filter_sortby ul li:nth-of-type(3) ul li:hover {
+        background-color: #09D77D;
+    }
+    
+    #filter_sortby ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+    }
+    
+    #filter_sortby ul ul li {
+        float: none;
+        width: 200px
+    }
+    
+    #filter_sortby ul ul a {
+        line-height: 120%;
+        padding: 10px 15px
+    }
+    
+    #filter_sortby ul li:hover > ul {
+        display: block;
+        background-color: #F3E5D8;
+        color: white;
+    }
+    
+    @media screen and (min-width: 1em) {
+        form {
+            font-size: 0.7em;
+        }
+    }
+    
+    @media screen and (min-width: 56em) {
+        form {
+            font-size: 1em;
+        }
+    }
+    /*Main algemeen*/
+    
+    @media screen and (min-width: 1em) {
+        main {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            overflow: hidden;
+        }
+    }
+    
+    @media screen and (min-width: 39em) {
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            overflow: hidden;
+        }
+    }
+    
+    @media screen and (min-width: 56em) {
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            overflow: hidden;
+        }
+    }
+    
+    @media screen and (min-width: 70em) {
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            height: auto;
+            overflow: hidden;
+        }
+    }
+    
+    article {
+        border-radius: 1.25em;
+        display: grid;
+        grid-template-rows: 4em auto 3em;
+        background-color: #FBF7F3;
+        margin-bottom: 1em;
+    }
+    /*Article > header*/
+    
+    article header {
+        color: black;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        border-top-left-radius: 1.25em;
+        border-top-right-radius: 1.25em;
+        height: 4em;
+    }
+    
+    article header button {
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #E73A7D;
+        width: 4rem;
+        height: 3rem;
+    }
+    
+    article header button.active {
+        position: absolute;
+        background: none;
+        border: none;
+        margin-top: -26.8%;
+        margin-left: 79.7%;
+        color: white;
+        transition: 3s;
+        width: 4rem;
+        height: 3rem;
+        opacity: 0;
+    }
+    
+    main article:nth-of-type(1) header {
+        background: url(../images/verliefd-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 4em;
+    }
+    
+    main article:nth-of-type(2) header {
+        background: url(../images/kater-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    
+    main article:nth-of-type(3) header {
+        background: url(../images/letterlijk-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    
+    main article:nth-of-type(4) header {
+        background: url(../images/blind-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    
+    main article:nth-of-type(5) header {
+        background: url(../images/moe-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    
+    main article:nth-of-type(6) header {
+        background: url(../images/iphone-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    
+    main article:nth-of-type(7) header {
+        background: url(../images/Beroemd-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    
+    main article:nth-of-type(8) header {
+        background: url(../images/zooi-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    
+    main article:nth-of-type(9) header {
+        background: url(../images/intiem-50%25.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 4em;
+        background-position: center;
+    }
+    /*Article > middle*/
+    
+    article > p {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    /*Article > footer*/
+    
+    footer {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    
+    footer ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1em;
+        margin: auto;
+        padding-left: 0;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: white;
+    }
+    /*footer - download*/
+    
+    footer ul button {
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #E73A7D;
+        width: 4rem;
+        height: 3rem;
+    }
+    
+    .downloaden {
+        background: url(../images/download.icon.pink.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        transition: 3s;
+    }
+    
+    .downloaden.active {
+        background: url(../images/download.voltooid.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        transform: rotate(-360deg);
+        transition: 5s;
+    }
+    /*footer populariteit*/
+    
+    footer ul li:nth-of-type(2) {
+        font: 0/0 a;
+        background: url(../images/popularity.icon.pink.png);
+        background-size: 4.5rem;
+        background-repeat: no-repeat;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    /*footer 'lees verder'*/
+    
+    footer ul li:nth-of-type(3) {
+        background-color: #E83D6A;
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        width: 7rem;
+        height: 2rem;
+        border-radius: 1.25em;
+        font-size: 1em;
+        border: none;
+        color: white;
+        text-align: center;
+        display: block;
+        margin-left: 6em;
+        box-shadow: inset 0 -0.1875rem 0.0625rem #b33751;
+        padding-top: 0.4em;
+        margin-left: 1em;
+    }
+    /*DETAILPAGINA verliefd------------------------------------------*/
+    
+    .sfeerResponsive {
+        display: block;
+    }
+    
+    @media screen and (min-width: 1em) {
+        .smallscreen {
+            display: block;
+            width: 100%;
+        }
+        .tablet {
+            display: none;
+        }
+        .desktop {
+            display: none;
+        }
+    }
+    
+    @media screen and (min-width: 39em) {
+        .smallscreen {
+            display: none;
+        }
+        .tablet {
+            display: block;
+            width: 100%;
+        }
+        .desktop {
+            display: none;
+        }
+    }
+    
+    @media screen and (min-width: 55em) {
+        .smallscreen {
+            display: none;
+        }
+        .tablet {
+            display: none;
+        }
+        .desktop {
+            display: block;
+            width: 100%;
+        }
+    }
+    
+    .desktop {}
+    /*ACCOUNT ------------------------------------------*/
+    
+    legend {
+        font-family: "Nexa-Bold";
+        font-size: 2em;
+        color: #53B365;
+        margin-bottom: 1em;
+    }
+    
+    fieldset {
+        border: none;
+        display: flex;
+    }
+    
+    .inlogForm form {
+        font-family: "NexaRegular";
+        font-size: 1em;
+        display: flex;
+        background-color: #FBF7F3;
+        border: none;
+        border-radius: 0.7em;
+        height: 18em;
+        width: 20em;
+        margin-top: 1em;
+    }
+    
+    .inlogForm {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        overflow: hidden;
+    }
+    
+    @media screen and (min-width: 39em) {
+        .inlogForm {}
+    }
+    
+    @media screen and (min-width: 55em) {
+        .inlogForm {}
+    }
+    
+    @media screen and (min-width: 70em) {
+        .inlogForm {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            height: 50em;
+        }
+    }
+    
+    fieldset > button {
+        background-color: #E83D6A;
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        width: 7rem;
+        height: 2rem;
+        border-radius: 1.25em;
+        font-size: 1em;
+        border: none;
+        color: white;
+        text-align: center;
+        display: block;
+        box-shadow: inset 0 -0.1875rem 0.0625rem #b33751;
+        margin-top: 2em;
+        font-family: 'Nexa-Bold';
+    }
+    
+    fieldset p {
+        font-size: 0.5em;
+    }
+    
+    .inlogForm input {
+        border-radius: 1.25em;
+        width: 17em;
+        margin-bottom: 1.2em;
+        font-family: 'Nexa-Light';
+        border-style: none;
+    }
+    
+    .inlogForm input:invalid {
+        background-color: red;
+    }
+    
+    .inlogForm input:valid {
+        background-color: lightgreen;
+    }
+    
+    .inlogForm input:focus {
+        border: 0.2em solid #2900a1;
+    }
