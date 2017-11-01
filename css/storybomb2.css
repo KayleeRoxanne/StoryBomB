@@ -17,13 +17,13 @@
     /*Algemene Lettertypes*/
     
     h1 {
-        font-family: "Nexa-Bold";
+        font-family: "Nexa-Bold", avenir;
         font-size: 2em;
         text-align: center;
     }
     
     h2 {
-        font-family: "Nexa-Bold";
+        font-family: "Nexa-Bold", avenir;
         font-size: 1.5em;
         background-color: white;
         border-radius: 1.25em;
@@ -33,17 +33,17 @@
     }
     
     h3 {
-        font-family: "Nexa-Light";
+        font-family: "Nexa-Light", avenir;
         font-size: 1.2em;
     }
     
     p {
-        font-family: "NexaRegular";
+        font-family: "NexaRegular", avenir;
         font-size: 1em;
     }
     
     a {
-        font-family: "NexaRegular";
+        font-family: "NexaRegular", avenir;
         font-size: 1em;
     }
     /*Header*/
@@ -120,7 +120,7 @@
     header input {
         border-radius: 1.25em;
         height: 3em;
-        font-family: 'NexaRegular';
+        font-family: 'NexaRegular', avenir;
         background: url(../images/delete.green.search.png);
         background-size: 2em;
         background-repeat: no-repeat;
@@ -586,7 +586,7 @@
     }
     
     .inlogForm form {
-        font-family: "NexaRegular";
+        font-family: "NexaRegular", avenir;
         font-size: 1em;
         display: flex;
         background-color: #FBF7F3;
