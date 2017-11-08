@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*Algemene vormgeving van de DOM*/
+
+ul > li {
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    background-color: #F3E5D8;
+}
+
+
+/*Algemene Lettertypes*/
+
+h1 {
+    font-family: "Nexa-Bold", avenir;
+    font-size: 2em;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Nexa-Bold", avenir;
+    font-size: 1.5em;
+    background-color: white;
+    border-radius: 1.25em;
+    margin-left: 2em;
+    padding-left: 1em;
+    margin-right: 12em;
+    padding-right: 1em;
+}
+
+h3 {
+    font-family: "Nexa-Light", avenir;
+    font-size: 1.2em;
+}
+
+p {
+    font-family: "NexaRegular", avenir;
+    font-size: 1em;
+}
+
+a {
+    font-family: "NexaRegular", avenir;
+    font-size: 1em;
+}
+
+
+/*Header*/
+
+header {
+    background-color: #FBF7F3;
+}
+
+
+/*logo*/
+
+header img {
+    width: 9em;
+    height: 4.5em;
+    position: absolute;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+
+
+/*Header navigatie*/
+
+header ul li:nth-of-type(1) {
+    font: 0/0 a;
+    background: url(../images/search.icon.green.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header ul li:nth-of-type(1):hover {
+    font: 0/0 a;
+    background: url(../images/search.icon.blue.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header ul li:nth-of-type(2) {
+    font: 0/0 a;
+    background: url(../images/download.icon.round.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header ul li:nth-of-type(2):hover {
+    font: 0/0 a;
+    background: url(../images/download.icon.blue.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header ul li:nth-of-type(3) {
+    font: 0/0 a;
+    background: url(../images/favorite.nav.def.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header ul li:nth-of-type(3):hover {
+    font: 0/0 a;
+    background: url(../images/favorite.icon.blue.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header ul li:nth-of-type(4) {
+    font: 0/0 a;
+    background: url(../images/account.icon!.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header ul li:nth-of-type(4):hover {
+    font: 0/0 a;
+    background: url(../images/account.icon.blue.png);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 3rem;
+}
+
+header nav {
+    margin: 0.5em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul {
+    display: flex;
+}
+
+header li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+header div {
+    background-color: aqua;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    font-family: 'Nexa-Light', Avenir;
+}
+
+
+/*mediaquery section*/
+
+@media screen and (min-width: 1em) {
+    section {
+        background: url(../images/strandfoto2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 12em;
+        background-position: center;
+    }
+}
+
+@media screen and (min-width: 56em) {
+    section {
+        background: url(../images/strand%20+%20tablet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 12em;
+        background-position: center;
+    }
+}
+
+
+/*Filter en sorteerfunctie*/
+
+
+/*zoekfunctie*/
+
+header input {
+    border-radius: 1em;
+    height: 3em;
+    font-family: 'NexaRegular', avenir;
+    padding-left: 1em;
+}
+
+.search {
+    opacity: 0;
+    width: 5em;
+}
+
+.search.active {
+    margin-left: -60em;
+    margin-top: 8em;
+    opacity: 1;
+    transition: 3s;
+    width: 40em;
+    border-style: none;
+}
+
+@media screen and (min-width: 1em) {
+    .search.active {
+        margin-left: -10em;
+        margin-top: 8em;
+        opacity: 1;
+        transition: 3s;
+        width: 20em;
+        border-style: none;
+        height: 2em;
+    }
+}
+
+@media screen and (min-width: 25em) {
+    .search.active {
+        margin-left: -30em;
+        margin-top: 8em;
+        opacity: 1;
+        transition: 3s;
+        width: 35em;
+        border-style: none;
+        height: 2em;
+    }
+}
+
+@media screen and (min-width: 55em) {
+    .search.active {
+        margin-left: -60em;
+        margin-top: 8em;
+        opacity: 1;
+        transition: 3s;
+        width: 40em;
+        border-style: none;
+    }
+}
