@@ -7,12 +7,12 @@ var number = 0;
 var favorite = document.querySelectorAll('article header button');
 for (var i = 0; i < favorite.length; i++) {
     favorite[i].addEventListener('click', function () {
-        if (this.classList.toggle('button.active')) {
+        if (this.classList.toggle('.favoNumber.active')) {
             number++;
         } else {
             number--;
         }
-        document.querySelector('header div').innerHTML = number;
+        document.querySelector('.favoNumber').innerHTML = number;
         this.classList.toggle('active');
     })
 }
@@ -20,6 +20,12 @@ for (var i = 0; i < favorite.length; i++) {
 var downloads = document.querySelectorAll('.downloaden');
 for (var i = 0; i < downloads.length; i++) {
     downloads[i].addEventListener('click', function () {
+        if (this.classList.toggle('.loadNumber.active')) {
+            number++;
+        } else {
+            number--;
+        }
+        document.querySelector('.loadNumber').innerHTML = number;
         this.classList.toggle('active')
     });
 }
